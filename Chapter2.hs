@@ -50,6 +50,22 @@ tuple = (1,2)
 
 first = fst tuple
 
-last = snd (5,7)
+my_last = snd (5,7)
 
 --zip
+
+my_reverse xs = foldl (\acc x -> x:acc) [] xs
+
+my_elem n (x:xs) = if n == x 
+                   then True
+                   else if null xs
+                        then False
+                        else my_elem n xs
+
+my_head (x:xs) = x
+
+--my_elem1 e xs = foldl aux False xs
+--    where aux x = if x == e
+--                    then return True
+--                    else False
+
